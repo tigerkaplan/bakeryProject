@@ -39,6 +39,14 @@ export default function RootLayout() {
                         </li>
                         <li>
                             <NavLink
+                                to="faq"
+                                className={({ isActive }) => isActive ? "text-orange underline" : "text-black hover:text-orange"}>
+                                FAQ
+                            </NavLink>
+                        </li>
+
+                        <li>
+                            <NavLink
                                 to="contact"
                                 className={({ isActive }) => isActive ? "text-orange underline" : "text-black hover:text-orange"}>
                                 Contact

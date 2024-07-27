@@ -11,10 +11,12 @@ import ContactForm from './pages/contact/ContactForm';
 import BusinessHours from './pages/contact/BusinessHours';
 import Address from './pages/contact/Address';
 import Footer from './pages/Footer';
+import Faq from './pages/Faq';
 
 // Layouts
 import RootLayout from './layouts/RootLayout';
 import ContactLayout from './layouts/ContactLayout';
+
 
 // Create the router
 const router = createBrowserRouter(
@@ -24,6 +26,7 @@ const router = createBrowserRouter(
       <Route path="about" element={<About />} />
       <Route path="menu" element={<Menu />} />
       <Route path="team" element={<Team />} />
+      <Route path="faq" element={<Faq/>} />
       <Route path="contact" element={<ContactLayout />}>
         <Route path='form' element={<ContactForm />} />
         <Route path='hours' element={<BusinessHours />} />
