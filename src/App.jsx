@@ -16,6 +16,7 @@ import Faq from './pages/Faq';
 // Layouts
 import RootLayout from './layouts/RootLayout';
 import ContactLayout from './layouts/ContactLayout';
+import Header from './pages/Header';
 
 
 // Create the router

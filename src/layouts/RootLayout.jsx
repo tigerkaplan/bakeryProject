@@ -1,68 +1,147 @@
-// src/layouts/RootLayout.jsx
 import { NavLink, Outlet } from 'react-router-dom';
+import { GiHamburgerMenu } from "react-icons/gi";
+import { FaTimes } from "react-icons/fa";
 import Footer from '../pages/Footer';
+import { useState } from 'react';
 
 export default function RootLayout() {
-    return (
-        <div className="min-h-screen flex flex-col bg-off-white">
-            <header className="bg-cream text-black shadow-md">
-                <nav className="container mx-auto flex justify-between items-center p-4">
-                    <h1 className="text-3xl font-bold">Bakery Website</h1>
-                    <ul className="flex space-x-4">
-                        <li>
-                            <NavLink
-                                to="/"
-                                className={({ isActive }) => isActive ? "text-orange underline" : "text-black hover:text-orange"}>
-                                Home
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink
-                                to="about"
-                                className={({ isActive }) => isActive ? "text-orange underline" : "text-black hover:text-orange"}>
-                                About
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink
-                                to="menu"
-                                className={({ isActive }) => isActive ? "text-orange underline" : "text-black hover:text-orange"}>
-                                Menu
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink
-                                to="team"
-                                className={({ isActive }) => isActive ? "text-orange underline" : "text-black hover:text-orange"}>
-                                Team
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink
-                                to="faq"
-                                className={({ isActive }) => isActive ? "text-orange underline" : "text-black hover:text-orange"}>
-                                FAQ
-                            </NavLink>
-                        </li>
+  // nav is starting off false
+  const [nav, setNav] = useState(false);
+  // so when user clicks the hamburger button, it goes from false(!nav) to true (nav)
+  const handleClick = () => setNav(!nav);
 
-                        <li>
-                            <NavLink
-                                to="contact"
-                                className={({ isActive }) => isActive ? "text-orange underline" : "text-black hover:text-orange"}>
-                                Contact
-                            </NavLink>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
+  return (
+    <div className="min-h-screen flex flex-col bg-off-white">
+      <header className="bg-[#e7e7e7] text-black shadow-md">
+        <nav className="flex justify-between p-5 items-center border-b">
+          <h1 className="text-4xl font-bold">Bakery Website</h1>
+          <ul className="hidden md:flex gap-6">
+            <li>
+              <NavLink
+                to="/"
+                className={({ isActive }) => isActive ? "text-orange underline" : "text-black hover:text-orange"}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="about"
+                className={({ isActive }) => isActive ? "text-orange underline" : "text-black hover:text-orange"}
+              >
+                About
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="menu"
+                className={({ isActive }) => isActive ? "text-orange underline" : "text-black hover:text-orange"}
+              >
+                Menu
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="team"
+                className={({ isActive }) => isActive ? "text-orange underline" : "text-black hover:text-orange"}
+              >
+                Team
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="faq"
+                className={({ isActive }) => isActive ? "text-orange underline" : "text-black hover:text-orange"}
+              >
+                FAQ
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="contact"
+                className={({ isActive }) => isActive ? "text-orange underline" : "text-black hover:text-orange"}
+              >
+                Contact
+              </NavLink>
+            </li>
+          </ul>
 
-            <main className="flex-1 container mx-auto p-6">
-                <Outlet />
-            </main>
+          {/* hamburger Icon */}
+          <div className="md:hidden" onClick={handleClick}>
+            {nav ? <FaTimes size={25} /> : <GiHamburgerMenu size={25} />}
+          </div>
 
-            <footer className="bg-cream text-black p-4 mt-auto">
-                <Footer />
-            </footer>
-        </div>
-    );
+          {/* Mobile Menu */}
+          <ul
+            className={`${
+              nav ? 'block' : 'hidden'
+            } absolute top-16 left-0 w-full bg-cream text-black shadow-md flex flex-col items-center space-y-4 py-4 z-50`}
+          >
+            <li>
+              <NavLink
+                to="/"
+                onClick={handleClick}
+                className={({ isActive }) => isActive ? "text-orange underline" : "text-black hover:text-orange"}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="about"
+                onClick={handleClick}
+                className={({ isActive }) => isActive ? "text-orange underline" : "text-black hover:text-orange"}
+              >
+                About
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="menu"
+                onClick={handleClick}
+                className={({ isActive }) => isActive ? "text-orange underline" : "text-black hover:text-orange"}
+              >
+                Menu
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="team"
+                onClick={handleClick}
+                className={({ isActive }) => isActive ? "text-orange underline" : "text-black hover:text-orange"}
+              >
+                Team
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="faq"
+                onClick={handleClick}
+                className={({ isActive }) => isActive ? "text-orange underline" : "text-black hover:text-orange"}
+              >
+                FAQ
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="contact"
+                onClick={handleClick}
+                className={({ isActive }) => isActive ? "text-orange underline" : "text-black hover:text-orange"}
+              >
+                Contact
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main className="flex-1 container mx-auto p-6">
+        <Outlet />
+      </main>
+
+      <footer className="bg-cream text-black p-4 mt-auto">
+        <Footer />
+      </footer>
+    </div>
+  );
 }

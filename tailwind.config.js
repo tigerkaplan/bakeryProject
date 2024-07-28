@@ -7,10 +7,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        cream: '#FFFDD0',
+        cream: '#FFFDD5',
         'off-white': '#FAF9F6',
         'muted-yellow': '#FDF5E6',
-        'muted-peach': '#F5DEB3',
+        'muted-peach': '#F5DE34',
         charcoal: '#36454F',
         chocolate: '#7B3F00',
       },
