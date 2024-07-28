@@ -5,9 +5,10 @@ import Footer from '../pages/Footer';
 import { useState } from 'react';
 
 export default function RootLayout() {
-  // nav is starting off false
+  // State to manage the visibility of the mobile menu
   const [nav, setNav] = useState(false);
-  // so when user clicks the hamburger button, it goes from false(!nav) to true (nav)
+
+  // Toggle function for the mobile menu
   const handleClick = () => setNav(!nav);
 
   return (
@@ -66,17 +67,13 @@ export default function RootLayout() {
             </li>
           </ul>
 
-          {/* hamburger Icon */}
+          {/* Hamburger Icon for Mobile */}
           <div className="md:hidden" onClick={handleClick}>
             {nav ? <FaTimes size={25} /> : <GiHamburgerMenu size={25} />}
           </div>
 
           {/* Mobile Menu */}
-          <ul
-            className={`${
-              nav ? 'block' : 'hidden'
-            } absolute top-16 left-0 w-full bg-cream text-black shadow-md flex flex-col items-center space-y-4 py-4 z-50`}
-          >
+          <ul className={`${nav ? 'block' : 'hidden'} absolute top-16 left-0 w-full bg-cream text-black shadow-md flex flex-col items-center space-y-4 py-4 z-50`}>
             <li>
               <NavLink
                 to="/"
