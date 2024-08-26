@@ -37,7 +37,7 @@ const Expertise = () => {
                         key={index}
                         className="flex items-center border-b-4 border-dotted border-neutral-700/40 py-2">
                         <div className="flex-shrink-0 pr-8 text-2xl">
-                            {cusine.number}
+                            {/* {cusine.number} */}
                         </div>
                         <div className="w-1/3 flex-shrink-0">
                             <img

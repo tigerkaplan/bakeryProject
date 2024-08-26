@@ -9,9 +9,8 @@ import dish8 from "../assets/dish8.jpeg";
 import dish9 from "../assets/dish9.jpeg";
 import dish10 from "../assets/dish10.jpeg";
 
-import italian from "../assets/italian.jpeg";
-import japanese from "../assets/japanese.jpeg";
-import indian from "../assets/indian.jpeg";
+import turkish from "../assets/turkish.jpg";
+
 
 import { FaXTwitter, FaFacebook, FaInstagram } from "react-icons/fa6";
 
@@ -89,9 +88,9 @@ export const DISHES = [
 ];
 
 export const ABOUT = {
-  header: "We love cooking!",
+  header: "We love coffee!",
   content:
-    "At Restaura, we believe that great food goes beyond taste; it tells a story of dedication and creativity. From our chef's signature creations to our attentive service, every detail is curated to ensure your visit is nothing short of exceptional. Whether you're savoring our renowned Tikka Kebab or exploring our diverse menu inspired by global flavors, each dish is a celebration of flavor and innovation. Join us for a culinary journey where every bite leaves a lasting impression. Experience Restaura—where every meal is a masterpiece.",
+    "At Patisserie 4 You, we believe that great food goes beyond taste; it tells a story of dedication and creativity. From our chef's signature creations to our attentive service, every detail is curated to ensure your visit is nothing short of exceptional. Whether you're savoring our renowned Tikka Kebab or exploring our diverse menu inspired by global flavors, each dish is a celebration of flavor and innovation. Join us for a culinary journey where every bite leaves a lasting impression. Experience Restaura—where every meal is a masterpiece.",
 };
 
 export const MISSION =
@@ -100,25 +99,12 @@ export const MISSION =
 export const CUSINES = [
   {
     number: "01.",
-    image: italian,
-    title: "Italian",
+    image: turkish,
+    title: "Turkish",
     description:
-      "Experience the flavors of Italy with our exquisite Italian cuisine, featuring traditional recipes and contemporary dishes.",
+      "Experience the flavors of Turkish with our exquisite Italian cuisine, featuring traditional recipes and contemporary dishes.",
   },
-  {
-    number: "02.",
-    image: japanese,
-    title: "Japanese",
-    description:
-      "Delight in the art of Japanese culinary excellence, offering a fusion of classic and modern flavors.",
-  },
-  {
-    number: "03.",
-    image: indian,
-    title: "Indian",
-    description:
-      "Indulge in the rich and diverse tastes of India, with a menu that celebrates the country's culinary heritage.",
-  },
+ 
 ];
 
 export const REVIEW = {
@@ -129,9 +115,10 @@ export const REVIEW = {
 };
 
 export const CONTACT = [
-  { key: "address", value: "Address: 123 Main Street, Paris, France, 345678" },
+  { key: "address", value: "Address: 107 London Rd, Brighton and Hove, Brighton BN1 4JG" },
+  { key: "location", value: "https://maps.app.goo.gl/3iB6zQd5icecqjvc9" },
   { key: "phone", value: "Phone: 123-456-7890" },
-  { key: "email", value: "Email: contact@restaurant.com" },
+  { key: "email", value: "Email: contact@abc.com" },
 ];
 
 export const SOCIAL_MEDIA_LINKS = [
