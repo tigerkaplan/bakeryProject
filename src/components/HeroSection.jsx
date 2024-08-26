@@ -1,6 +1,6 @@
 import video from '../assets/hero.mp4';
-import hero from '../assets/logo.png'
-import logo from '../assets/logo.png'
+import hero from '../assets/coffeeHero.jpg'
+import logo from '/public/lLogo.png'
 import { motion } from 'framer-motion';
 
 
@@ -28,7 +28,7 @@ const HeroSection = () => {
                     src={logo}
                     className='w-full p-4'
                     alt="" />
-                <p className="p-4 text-lg tracking-tighter text-white">Brighton</p>
+                <p className="p-4  text-lg tracking-tighter text-white">Brighton</p>
             </div>
 
         </section>
