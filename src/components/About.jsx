@@ -10,7 +10,7 @@ const About = () => {
             </h2>
             <div className="flex flex-wrap">
                 <div className="w-full p-4 lg:w-1/2">
-                    <img src={about} alt="About Bakery" className="rounded-3xl lg:-rotate-3" />
+                    <img src={about} alt="Coffee and pastries on a table" loading="lazy" className="rounded-3xl lg:-rotate-3" />
                 </div>
                 <div className="w-full p-4 lg:w-1/2">
                     <motion.h2

@@ -5,7 +5,7 @@ const containerVariants = {
     show: {
         opacity: 1,
         transition: {
-            staggerChildren: true,
+            staggerChildren: 0.2,
         },
     }
 }
@@ -27,7 +27,7 @@ const Expertise = () => {
                 Our Expertise
             </h2>
             <motion.div 
-            initials="hidden"
+            initial="hidden"
             whileInView="show"
             variants={containerVariants}
             className="container mx-auto px-4 ">
@@ -42,7 +42,8 @@ const Expertise = () => {
                         <div className="w-1/3 flex-shrink-0">
                             <img
                                 src={cusine.image}
-                                alt={cusine.title}
+                                alt="Turkish desserts in bowls"
+                                loading="lazy"
                                 className="h-auto rounded-3xl" />
                         </div>
                         <div className="pl-8">

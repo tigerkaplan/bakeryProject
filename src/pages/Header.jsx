@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { motion } from "framer-motion";
 
 
@@ -19,14 +18,12 @@ const headerVariants = {
 }
 
 export default function Header() {
-  // header state
-  const [isActive, setisActive] = useState(false);
   return (
 
     <motion.header 
-    variant={headerVariants}
+    variants={headerVariants}
     initial="hidden"
-    animated={isActive ?  "show" : "" }
+    animate="hidden"
     className="bg-pink-200/20 fixed w-full max-w-[1800px] z-50 py-4">Header</motion.header>
   )
 }

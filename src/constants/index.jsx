@@ -25,60 +25,70 @@ export const LINKS = [
 
 export const DISHES = [
   {
+    id: 1,
     image: dish1,
     title: "Spaghetti Carbonara",
     description: "Creamy pasta with bacon and cheese",
     category: "Pasta",
   },
   {
+    id: 2,
     image: dish2,
     title: "Chicken Tikka Masala",
     description: "Indian curry with tender chicken in spicy sauce",
     category: "Pasta",
   },
   {
+    id: 3,
     image: dish3,
     title: "Caprese Salad",
     description: "Fresh tomatoes, mozzarella, and basil with balsamic glaze",
     category: "Salad",
   },
   {
+    id: 4,
     image: dish4,
     title: "Sushi Roll",
     description: "Assorted seafood and vegetables wrapped in seaweed and rice",
     category: "Sushi",
   },
   {
+    id: 5,
     image: dish5,
     title: "Chocolate Lava Cake",
     description: "Decadent chocolate cake with a gooey center",
     category: "Dessert",
   },
   {
+    id: 6,
     image: dish6,
     title: "Greek Salad",
     description: "Crisp lettuce, olives, feta cheese, and tangy dressing",
     category: "Salad",
   },
   {
+    id: 7,
     image: dish7,
     title: "Pad Thai",
     description: "Stir-fried rice noodles with shrimp, tofu, and peanuts",
     category: "Pasta",
   },
   {
+    id: 8,
     image: dish8,
     title: "Peking Duck",
     description: "Crispy duck with pancakes, cucumber, and hoisin sauce",
     category: "Pasta",
   },
   {
+    id: 9,
     image: dish9,
     title: "Beef Wellington",
     description: "Tender beef filet wrapped in pastry with mushrooms and herbs",
     category: "Pasta",
   },
   {
+    id: 10,
     image: dish10,
     title: "Tiramisu",
     description:

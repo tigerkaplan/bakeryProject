@@ -53,6 +53,7 @@ const Review = () => {
                     <img
                         src={xaviour}
                         alt={REVIEW.name}
+                        loading="lazy"
                         width={80}
                         height={80}
                         className='rounded-full border'
@@ -76,7 +77,8 @@ const Review = () => {
                         variants={itemVariants}
                         key={index}
                         src={customer}
-                        alt='customer'
+                        alt=""
+                        loading="lazy"
                         className='h-[300px] w-[200px] rounded-br-3xl rounded-tl-3xl object-cover'
                     />
                 ))}

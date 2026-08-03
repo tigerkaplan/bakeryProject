@@ -7,19 +7,22 @@ import HeroSection from './components/HeroSection'
 import Mission from './components/Mission'
 import Navbar from './components/Navbar'
 import Review from './components/Review'
+import { MotionConfig } from 'framer-motion'
 const App = () => {
   return (
-    <main className='overflow-y-hidden text-neutral-200 antialiased'>
-      <HeroSection />
-      <Navbar />
-      <Dishes />
-      <About />
-      <Mission />
-      <Expertise />
-      <Review />
-      <ContactSection />
-      <Footer />
-    </main>
+    <MotionConfig reducedMotion="user">
+      <main className='overflow-y-hidden text-neutral-200 antialiased'>
+        <HeroSection />
+        <Navbar />
+        <Dishes />
+        <About />
+        <Mission />
+        <Expertise />
+        <Review />
+        <ContactSection />
+        <Footer />
+      </main>
+    </MotionConfig>
   );
 };
 

@@ -1,18 +1,30 @@
 import video from '../assets/hero.mp4';
 import hero from '../assets/coffeeHero.jpg'
 import logo from '/public/lLogo.png'
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
+import { useEffect, useRef } from 'react';
 
 
 const HeroSection = () => {
+    const prefersReducedMotion = useReducedMotion();
+    const videoRef = useRef(null);
+
+    useEffect(() => {
+        if (prefersReducedMotion) {
+            videoRef.current?.pause();
+        }
+    }, [prefersReducedMotion]);
+
     return (
         <section className='relative flex h-screen items-center justify-center'>
             <div className="absolute inset-0 -z-20 h-full w-full overflow-hidden">
                 <video
+                    ref={videoRef}
                     src={video}
                     className='h-full w-full object-cover'
                     muted
-                    autoPlay
+                    autoPlay={!prefersReducedMotion}
+                    controls={prefersReducedMotion}
                     loop
                     playsInline
                     poster={hero}
@@ -28,6 +40,7 @@ const HeroSection = () => {
                     src={logo}
                     className='w-full p-4'
                     alt="" />
+                <h1 className="px-4 text-3xl font-semibold tracking-tighter text-white lg:text-5xl">Patisserie 4 You</h1>
                 <p className="p-4  text-lg tracking-tighter text-white">Brighton</p>
             </div>
 

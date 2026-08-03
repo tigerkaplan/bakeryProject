@@ -2,21 +2,33 @@ import missionImg from "../assets/mission.jpg"
 import mission from "../assets/mission.mp4"
 import { MISSION } from "../constants";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 const Mission = () => {
+    const prefersReducedMotion = useReducedMotion();
+    const videoRef = useRef(null);
+
+    useEffect(() => {
+        if (prefersReducedMotion) {
+            videoRef.current?.pause();
+        }
+    }, [prefersReducedMotion]);
+
     return (
         <section id='mission'>
             <div className="container mx-auto text-center">
                 <h2 className="mb-8 text-3xl lg:text-4xl">Our Mission</h2>
                 <div className="relative flex items-center justify-center">
                     <motion.video
+                        ref={videoRef}
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 1 }}
                         className="w-full rounded-3xl"
-                        autoPlay
+                        autoPlay={!prefersReducedMotion}
+                        controls={prefersReducedMotion}
                         muted
                         loop
                         playsInline
